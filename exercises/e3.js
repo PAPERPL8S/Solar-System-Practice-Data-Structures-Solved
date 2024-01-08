@@ -6,10 +6,27 @@ import { data } from "../data/data";
 
 export function getAllAverageTemperatures(data) {
   // Your code goes here...
-  const allAverageTemperatures = data.getAllAverageTemperatures;
-  const planetAverageTemperatures = Object.values(allAverageTemperatures).map(planetsAvgTemps => planetsAvgTemps.temperature);
-  
-  return planetAverageTemperatures;
+  if (!Array.isArray(data)) {
+  }
+  const planetAverageTemperatures = (planetsAvgTemps => planetsAvgTemps);
+
+  const planets = [
+     '76',
+     '55',
+     '165',
+     '210',
+     '440',
+     '134',
+     '288',
+     '737' 
+  ];
+
+  const result = planets.map((planet, index) => ({
+    name: planet.name,
+    avgTemp: planetAverageTemperatures[index]
+  }));
+
+  return result;
 }
 
 
