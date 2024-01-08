@@ -20,7 +20,7 @@ export function getPlanetsWithMassValue(data, number) {
   ];
 
 const result = getPlanetsWithMassValue(planets, 4);
-console.log(result);
+
 
 
 // === TEST YOURSELF ===
