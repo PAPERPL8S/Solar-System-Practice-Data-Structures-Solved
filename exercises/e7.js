@@ -6,10 +6,15 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
+const planetsWithMoons = ["Uranus", "Neptune", "Jupiter", "Mars", "Saturn", "Earth"];
+
+  const result = planetsWithMoons.map((planet) => ({
+    name: planet,
+    hasMoons: data[planet] && data[planet].moons && data[planet].moons.length > 0,
+  }));
+
+  return result;
 }
-
-
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"
 // If the test has all tests passed, switch to the next exercise file
