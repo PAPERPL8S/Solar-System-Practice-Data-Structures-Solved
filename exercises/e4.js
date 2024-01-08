@@ -6,8 +6,18 @@ import { data } from "../data/data";
 
 export function getPlanetsWithLowGravity(data) {
   // Your code goes here...
-}
+  const planets = [
+    { name: 'Mercure', gravity: 3.7 },
+    { name: 'Venus', gravity: 8.87 },
+    { name: 'Earth', gravity: 9.8 },
+    { name: 'Uranus', gravity: 8.87 },
+    { name: 'Mars', gravity: 3.71 },
+  ];
 
+    planets.filter(planet => planet.gravity < 10).map(planet => planet.name);
+}
+  const LowGravityPlanets = getPlanetsWithLowGravity(data);
+  console.log(getPlanetsWithLowGravity);
 
 
 // === TEST YOURSELF ===
