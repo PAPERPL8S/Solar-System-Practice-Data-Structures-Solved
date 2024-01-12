@@ -19,7 +19,7 @@ export function getPlanetsWithMassValue(data, number) {
     { name: 'Neptune', massValue: 1.02413 }
   ];
 
-const result = getPlanetsWithMassValue(planets, 4);
+  const result = getPlanetsWithMassValue(planets, 4);
 
 
 
