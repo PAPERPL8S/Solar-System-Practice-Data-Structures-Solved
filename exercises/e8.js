@@ -10,10 +10,6 @@ const planetWithMoon = data.planets.find(planet => planet.moons && planet.moons.
   return planetWithMoon ? planetWithMoon.name : null;
 }
 
-  // return data.planets
-  //   .filter(planet => planet.moons && planet.moons.includes(moonName))
-  //   .map(planet => planet.name);
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"
 // If the test has all tests passed, switch to the next exercise file
