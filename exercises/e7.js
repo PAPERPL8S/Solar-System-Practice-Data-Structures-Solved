@@ -6,18 +6,10 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
-  const planetsWithMoons = ["Uranus", "Neptune", "Jupiter", "Mars", "Saturn", "Earth"];
-  
-    const result = planetsWithMoons
-      .filter(planet => data[planet] && data[planet].moons && data[planet].moons.length > 0)
-      .map(planet => planet);
-
-    while (result.length < 6) {
-    result.push(planetsWithMoons)
-  };
-    return result;
-};
-
+    return data.planets
+      .filter(planet => planet && planet.moons && planet.moons.length > 0)
+      .map(planet => planet.name);
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"
