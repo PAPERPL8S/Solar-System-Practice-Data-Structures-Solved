@@ -6,19 +6,9 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
-    const totalMoonsCount = data.planets.reduce((sum, planet) => {
-    if (planet.moonsCount !== undefined) {
-      return sum + planet.moonsCount;
-    }
-    return sum;
-  }, 0);
-
-  return totalMoonsCount;
-}
-
-const resultNumber = allPlanetsMoonsCount(data);
-console.log(resultNumber);
-
+  return data.planets.reduce((sum, planet) => sum + (planet.moonsCount || 0),0);
+  }
+  
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"
 // If the test has all tests passed, switch to the next exercise file
