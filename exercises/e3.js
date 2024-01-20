@@ -6,25 +6,8 @@ import { data } from "../data/data";
 
 export function getAllAverageTemperatures(data) {
   // Your code goes here...
-  if (!Array.isArray(data)) {
-  
-  }
-
-  const planetsAvgTemps = [
-    '76',
-    '55',
-    '165',
-    '210',
-    '440',
-    '134',
-    '288',
-    '737'
-  ];
-
-  const result = planetsAvgTemps.map(avgTemp => parseInt(avgTemp, 10));
-
-  return result;
-};
+  return data.planets.map((planet) => planet.avgTemp);
+}
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
 // If the test has all tests passed, switch to the next exercise file
