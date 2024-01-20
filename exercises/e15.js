@@ -8,7 +8,7 @@ export function getPlanetsWithNoMoons(data) {
   // Your code goes here...
   const planetsNamesWithNoMoons = data.planets
   .filter(planet => !planet.moons || planet.moons.length === 0)
-  .map(planet => planet.name);
+    .map(planet => planet.name);
   
   return planetsNamesWithNoMoons;
 }
