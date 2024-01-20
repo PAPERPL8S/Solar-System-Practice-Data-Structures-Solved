@@ -10,7 +10,6 @@ export function getPlanetNames(data) {
 }
 
 
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"
 // If the test has all tests passed, switch to the next exercise file
