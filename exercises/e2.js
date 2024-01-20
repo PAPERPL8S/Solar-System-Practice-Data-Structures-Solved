@@ -6,10 +6,7 @@ import { data } from "../data/data";
 
 export function getAsteroidNames(data) {
   // Your code goes here...
-  const allAsteroids = data.asteroids;
-  const asteroidsNames = Object.values(allAsteroids).map(asteroids => asteroids.name);
-  
-  return asteroidsNames;
+  return data.asteroids.map((asteroids) => asteroids.name);
 }
 
 
