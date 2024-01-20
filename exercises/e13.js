@@ -6,16 +6,10 @@ import { data } from "../data/data";
 
 export function getAveragePlanetsTemperature(data) {
   // Your code goes here...
-  const averageTemps = data.planets.reduce((sum, planet) => {
-    if (planet.avgTemp !== undefined) {
-      return sum + planet.avgTemp;
-    }
-    return sum;
-  }, 0);
-
-  return averageTemps / data.planets.length; 
-}
-
+  const totalTemperature = data.planets.reduce((sum, planet) => sum + (planet.avgTemp || 0), 0);
+  const averageTemperature = totalTemperature / data.planets.length;
+  return averageTemperature;
+  }
 
 
 
